@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>myapp</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+	<!----hero Section start---->
+
+	<div class="hero">
+		<nav>
+			<h2 class="logo">Lappy<span>man</span></h2>
+		</nav>
+
+		<div class="content">
+			<h1>Let's<span>Build</span></h1>
+			<h3>Your Personal Computer</h3>
+			<div class="newslatter">
+				<form>
+					<a href="/build" class="btn">Start</a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!----About section start---->
+	<section class="about">
+		<div class="main">
+			<img
+				src="https://www.hwcooling.net/wp-content/uploads/2020/12/lenovo-legion-7i-46.gif">
+			<div class="about-text">
+				<h2>About LappyMan</h2>
+				<h5>Build <span>Laptop</span></h5>
+				<p>Lappyman merupakan Sistem Website Artificial Intelligence 
+				untuk Rekomendasi Perakitan Personal Computer (PC) Berdasarkan 
+				System Requirements Aplikasi Pada Sistem Operasi Windows</p>
+				<button type="button">Start Build</button>
+			</div>
+		</div>
+	</section>
+
+	<!-----service section start----------->
+	<div class="service">
+		<div class="title">
+			<h2>Categories</h2>
+		</div>
+
+		<div class="box">
+			<div class="card">
+				<img src="https://github.com/Syachrifaldi/ProjectPA/blob/main/static/img/hihihi.png?raw=true">
+				<h5>Basic</h5>
+				<div class="pra">
+					<p>Every website should be built with two primary goals: Firstly, it needs to work across all
+						devices. Secondly, it needs to be fast as possible.</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<img src="https://github.com/Syachrifaldi/ProjectPA/blob/main/static/img/image-removebg-preview%20(33).png?raw=true">
+				<h5>Medium</h5>
+				<div class="pra">
+					<p>Every website should be built with two primary goals: Firstly, it needs to work across all
+						devices. Secondly, it needs to be fast as possible.</p>
+				</div>
+			</div>
+
+			<div class="card">
+				<img src="https://github.com/Syachrifaldi/ProjectPA/blob/main/static/img/image-removebg-preview%20(32).png?raw=true">
+				<h5>God</h5>
+				<div class="pra">
+					<p>Every website should be built with two primary goals: Firstly, it needs to work across all
+						devices. Secondly, it needs to be fast as possible.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!------footer start--------->
+	<footer>
+		<div class="header">
+			Meet Our Team
+		</div>
+
+		<section>
+			<div class="team" style="--img: url(../res/image/pexels-daniel-xavier-1239291.jpg)">
+				<img src="../static/img/Ivan Akbar Yusuf.jpg" alt="">
+				<div class="info">
+					<div class="name">Ivan Akbar Yusuf</div>
+					<div class="title">Universitas Bina Sarana Informatika</div>
+					<div class="social">
+						<i class="fab fa-whatsapp"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-google"></i>
+						<i class="fab fa-linkedin"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="team" style="--img: url(../res/image/pexels-andrea-piacquadio-774909.jpg)">
+				<img src="https://github.com/Syachrifaldi/mini_project_NLP/blob/main/Syachrial%20Putra%20Rifaldi.png?raw=true" alt="">
+				<div class="info">
+					<div class="name">Syachrial Putra Rifaldi</div>
+					<div class="title">Universitas Al - Azhar Indonesia</div>
+					<div class="social">
+						<i class="fab fa-whatsapp"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-google"></i>
+						<i class="fab fa-linkedin"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="team" style="--img: url(../res/image/pexels-creation-hill-1681010.jpg)">
+				<img src="../static/img/Muhammad Fahmi Haris.jpg" alt="">
+				<div class="info">
+					<div class="name">Muhammad Fahmi Haris</div>
+					<div class="title">Universitas Bina Sarana Informatika</div>
+					<div class="social">
+						<i class="fab fa-whatsapp"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-google"></i>
+						<i class="fab fa-linkedin"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="team" style="--img: url(../res/image/pexels-pixabay-220453.jpg)">
+				<img src="../static/img/Alifah Nur Aulia .jpg" alt="">
+				<div class="info">
+					<div class="name">Alifah Nur Aulia</div>
+					<div class="title">STIE Ipwija</div>
+					<div class="social">
+						<i class="fab fa-whatsapp"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-google"></i>
+						<i class="fab fa-linkedin"></i>
+					</div>
+				</div>
+			</div>
+
+			<div class="team" style="--img: url(../res/image/pexels-andrea-piacquadio-774909.jpg)">
+				<img src="../static/img/Jessy Ovalia.jpg" alt="">
+				<div class="info">
+					<div class="name">Jessy Ovalia</div>
+					<div class="title">Insitut Pertanian Bogor</div>
+					<div class="social">
+						<i class="fab fa-whatsapp"></i>
+						<i class="fab fa-instagram"></i>
+						<i class="fab fa-google"></i>
+						<i class="fab fa-linkedin"></i>
+					</div>
+				</div>
+			</div>
+
+		</section>
+	</footer>
+</body>
+
+</html>
