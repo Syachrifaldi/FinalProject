@@ -1,7 +1,6 @@
 import pickle
 
-# global variable
-global dataset, model, aplikasi, budget, laptop
+global dataset, model, aplikasi, budget, list_apk, list_biaya
 
 def load():
     global dataset, model, aplikasi, budget, laptop
@@ -10,14 +9,11 @@ def load():
     aplikasi = pickle.load(open('static/model/aplikasi.pkl','rb'))
     budget = pickle.load(open('static/model/budget.pkl','rb'))
     laptop = pickle.load(open('static/model/laptop.pkl','rb'))
-    
-def user(applist, budgetlist):
-    list_app = applist
-    list_budget = budgetlist
-    data = [[list_app, list_budget]]
-    return data
 
 def prediksi(app_list, budget_list):
+    global list_apk, list_biaya, rek_laptop
+    list_apk= app_list
+    list_biaya=budget_list
     word = ""
     stat = 0
     listapp = []
@@ -42,21 +38,16 @@ def prediksi(app_list, budget_list):
     bud = budget.transform([str(budget_list)])
     rekomendasi = model.predict([[int(app1),int(app2),int(app3),int(bud)]])
     reklaptop = laptop.inverse_transform([rekomendasi])
-    
-    # for a in reklaptop:
-    #     index = dataset[dataset['brand']==a].index.values[0]
-    
-    # kol1 = dataset.loc[index,'processor_brand']
-    # kol2 = dataset.loc[index,'processor_name']
-    # kol3 = dataset.loc[index,'graphic']
-    # kol4 = dataset.loc[index,'ram_gb']
-    # kol5 = dataset.loc[index,'ram_type']
-    # kol6 = dataset.loc[index,'ssd']
-    # kol7 = dataset.loc[index,'hdd']
-    # kol8 = dataset.loc[index,'os']
-    # kol9 = dataset.loc[index,'battery']
-    # kol10 = dataset.loc[index,'display_size']
-    # kol11 = dataset.loc[index,'price']
-    
-    # return a, kol1, kol2, kol3, kol4, kol5, kol6, kol7, kol8, kol9, kol10, kol11
+
     return reklaptop
+
+
+def rekomendasi(rek_laptop):
+    number_of_recommendations = 3
+    cosine = pickle.load(open('static/model/cosine.pkl','rb'))
+    index = dataset[dataset['brand']==rek_laptop].index.values[0]
+    similarity_scores = list(enumerate(cosine[index]))
+    similarity_scores_sorted = sorted(similarity_scores, key=lambda x: x[1], reverse=True)
+    recommendations_indices = [t[0] for t in similarity_scores_sorted[1:(number_of_recommendations+1)]]
+
+    return recommendations_indices
